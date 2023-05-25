@@ -3,6 +3,9 @@ import { setDemoInfo } from "@/store/module/demo";
 import React, { useEffect, useState } from "react";
 import { Button } from 'antd'
 
+import './index.less'
+import Loading from "@/components/Loading";
+
 function useComponentWillMount(func: () => void){
   const [isRenderer, setIsRenderer] = useState(false);
 
@@ -27,9 +30,11 @@ export default function Home(){
     dispatch(setDemoInfo({name: 'new name'}))
   }
 
-  return <div className="home-page-container">
+  return <div className="home-container">
     home
     {name}
     <Button type="primary" onClick={changeName}>按钮</Button>
+    <div className="trapezoid"></div>
+    <Loading />
   </div>
 }
