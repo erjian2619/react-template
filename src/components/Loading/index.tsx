@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './index.less'
-
-
+ 
 const Loading = (props: { text?: string }) => {
   const { text='loading...' } = props;
 

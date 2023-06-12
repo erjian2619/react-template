@@ -6,17 +6,19 @@ import { Navigate } from "react-router-dom";
 const NotFound = SuspenseLazy(() => import("@/view/NotFound"));
 
 import homeRouter from "./modules/home";
+import blogRouter from "./modules/blog";
 import Login from "@/view/login";
 import { RouteConfig } from "./interface";
 
 export const routerArray = [
-  ...homeRouter
+  ...homeRouter,
+  ...blogRouter
 ]
 
 const routes: RouteConfig[] = [
   {
     path: "/",
-    element: <Navigate to='home' />
+    element: <Navigate to='blog' />
   },
   {
     path: "/login",

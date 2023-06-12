@@ -1,10 +1,10 @@
 import { useAppDispatch, useAppSelector } from "@/store/hook";
 import { setDemoInfo } from "@/store/module/demo";
+import { Button } from 'antd';
 import React, { useEffect, useState } from "react";
-import { Button } from 'antd'
 
-import './index.less'
 import Loading from "@/components/Loading";
+import './index.less';
 
 function useComponentWillMount(func: () => void){
   const [isRenderer, setIsRenderer] = useState(false);
